@@ -1,0 +1,48 @@
+
+#menu {
+  float: left;
+  width: 15%;
+}
+#contenido {
+  float: left;
+  width: 85%;
+}
+#contenido #principal {
+  float: left;
+  width: 80%;
+}
+#contenido #secundario {
+  float: left;
+  width: 20%;
+}
+
+#pie {
+  clear: both;
+}
+
+
+.vertical-menu{float: right;}
+  
+.vertical-menu a {
+
+  background-color: #ffd5cd; /* fondo */
+  color: rgb(255, 255, 255); /*texto*/
+  display: block; /* enlaces uno debajo de otro */
+  padding: 20px; /* Add some padding */
+  margin-left: 30px;
+  margin-left:50px;
+  text-decoration: none; /* Remove underline from links */
+  
+}
+
+
+.vertical-menu a:hover {
+  background-color: #cffffe; /* color cuando pasa el mouse */
+}
+
+.vertical-menu a.active {
+  background-color: #efbbcf;
+  color: white;
+}
+
+.tarjeta{float: right;}

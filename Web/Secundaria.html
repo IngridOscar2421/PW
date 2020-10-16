@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broken Control</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        .zoom{
+            /* Aumentamos la anchura y altura durante 1.5 segundos */
+            transition: width 1.5s, height 1.5s, transform 1.5s;
+            -moz-transition: width 0.3s, height 0.3s, -moz-transform 0.3s;
+            -webkit-transition: width 0.3s, height 0.3s, -webkit-transform 0.3s;
+            -o-transition: width 0.3s, height 0.3s,-o-transform 0.3s;
+        }
+        .zoom:hover{
+            /* tranformamos el elemento al pasar el mouse por encima al doble de
+               su tamaño con scale(1.1). */
+            transform : scale(1.1);
+            -moz-transform : scale(1.1);      /* Firefox */
+            -webkit-transform : scale(1.1);   /* Chrome - Safari */
+            -o-transform : scale(1.1);        /* Opera */
+        }
+    </style>
+<script src="https://kit.fontawesome.com/16c249ee8a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="position-static">
+    <div class="sticky-top">
+      <nav style="background-color: rgb(219, 112, 147);" class="navbar navbar-expand-lg navbar-dark">
+  
+        <img src="image/BC2.png" width="140" height="55" alt="" loading="lazy">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="http://127.0.0.1:5500/Principal.html"><FONT FACE="verdana" SIZE=3>Inicio</FONT> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link " href="http://127.0.0.1:5500/Rese%C3%B1as.html"><FONT FACE="verdana" SIZE=3>Reseñas</FONT></a> 
+            </li>
+            <li class="nav-item active active">
+              <a class="nav-link " href="http://127.0.0.1:5500/Rese%C3%B1as.html"><FONT FACE="verdana" SIZE=3>Videojuegos</FONT></a>
+            </li> 
+            <li class="nav-item active">
+              <a class="nav-link " href="http://127.0.0.1:5500/Rese%C3%B1as.html"><FONT FACE="verdana" SIZE=3>Cine</FONT></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="http://127.0.0.1:5500/Rese%C3%B1as.html"><FONT FACE="verdana" SIZE=3>Música</FONT></a>
+            </li>
+            <form class="form-inline my-2 my-lg-0">
+              <div class="dropdown">
+                <button class="btn btn-outline-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Login
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <div class="card-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Dirección de Correo Electrónico</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">No compartiremos su información con terceros.</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                      </div>
+                </div>
+              </div>
+            </form>
+        
+        </div>
+        </li>
+  
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </div>
+    </nav>
+  
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+      </ol>
+      
+      <div class="carousel-inner">
+        <div class="carousel-item active zoom">
+          <img
+            src="https://i.pinimg.com/originals/e7/d0/9e/e7d09ea46cd481b9e49614a4ce44a2a5.png"
+            width="1000" height="500" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <span  class="badge badge-info">Info</span>
+            <h5>Ingrid patea a una señora de la tercera edad</h5>
+            <p>El precio que pagan los ciudadanos por la rebeldia de los jovenes.</p>
+          </div>
+        </div>
+        <div class="carousel-item zoom">
+          <img
+            src="https://cdna.artstation.com/p/assets/images/images/008/110/102/large/juan-pablo-roldan-cb1f9ca8-9a42-4558-a91e-ca3544c2899d.jpg?1510561604"
+            width="1000" height="500" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <span  class="badge badge-info">Games</span>
+            <h5>Second slide label</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="carousel-item zoom">
+          <img src="https://images5.alphacoders.com/506/thumb-1920-506616.jpg"
+            width="1000" height="500" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <span  class="badge badge-info">Anime</span>
+            <h5>Third slide label</h5>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </div>
+        <div class="carousel-item zoom">
+          <img
+            src="https://cdna.artstation.com/p/assets/images/images/008/214/772/large/keith-beltramini-kb-hw-01.jpg?1511236019"
+            width="1000" height="500" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <span  class="badge badge-info">Games</span>
+            <h5>Third slide label</h5>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </div>
+        <div class="carousel-item zoom">
+          <img src="https://i.pinimg.com/originals/b6/ef/fb/b6effb3a1ed2a8d16497d7d652c2fdd4.jpg" width="1000" height="500" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <span  class="badge badge-info">Anime</span>
+            <h5>Third slide label</h5>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+  </div>
+  
+  <style>
+    body {
+      background-color: rgba(255, 250, 250);
+    }
+  </style>
+<!--  Noticias -->
+    <div  class="container">
+      <div id="mainnews"> <br><br>
+        <h1>Noticias Frescas <span class="badge badge-secondary">New</span></h1>
+        
+        <br>
+      </div>
+      <div class="shadow p-3 mb-3 bg-white rounded">
+        <div  class="card mb-1" style="max-width:  1920px;">
+          <div class="row no-gutters">
+            <div class="col-md-4 zoom">
+              <img src="https://image.tmdb.org/t/p/original/u7Ojm0rRRN4z9v3igr5Yes7q8S1.jpg"  height: 100vh;
+     width: 100vw;
+     position: absolute; class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">"Ruka-Chan" La mejor Waifu</h5>
+                <p class="card-text">A través de una encuesta mundial, se a declarado a "ruka-chan, como la mejor waifu
+                  de todo el multiverso. Fanaticos de todo el mundo quedaron encantados con la noticia.".</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shadow p-3 mb-3 bg-white rounded">
+        <div class="card mb-1" style="max-width:  1920px;">
+          <div class="row no-gutters">
+            <div class="col-md-4 zoom">
+              <img src="https://wallpapercave.com/wp/wp1874036.jpg"  height: 100vh;
+     width: 100vw;
+     position: absolute; class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">“My Hero Academia 5″: fecha de estreno de la temporada 5, tráiler, qué pasará, personajes y todo</h5>
+                <p class="card-text">“My Hero Academia” (“Boku no Hero Akademia” en su idioma original) vuelve para una quinta temporada, así lo anunció la cuenta de Twitter del programa en abril del 2020. Aunque fue una buena noticia para los fans no fue una sorpresa, ya que la escena post-créditos de la cuarta entrega dejó pistas de una continuación.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shadow p-3 mb-3 bg-white rounded">
+        <div class="card mb-1" style="max-width:  1920px;">
+          <div class="row no-gutters">
+            <div class="col-md-4 zoom">
+              <img src="https://wallpaperaccess.com/full/910169.jpg"  height: 100vh;
+     width: 100vw;
+     position: absolute; class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Halo Infinite: 343i desmiente planes para cancelar la versión para Xbox One</h5>
+                <p class="card-text">En los últimos días han estado circulando varios rumores que pintan un panorama poco favorable para los dueños de un Xbox One. En ellos aseguraban que Halo Infinite para actual generación sería cancelado y que el FPS llegaría hasta 2022.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shadow p-3 mb-3 bg-white rounded">
+        <div class="card mb-1" style="max-width:  1920px;">
+          <div class="row no-gutters">
+            <div class="col-md-4 zoom">
+              <img src="https://wallpapercave.com/wp/wp6560188.jpg"  height: 100vh;
+     width: 100vw;
+     position= absolute class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">PlayStation 5: Cuánto cuesta, cuándo sale y juegos confirmados</h5>
+                <p class="card-text">La consola de nueva generación en la que trabaja Sony dio a conocer oficialmente su precio y fecha de lanzamiento..</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--  numero de paginas -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+
+    </div>
+  </div>
+
+  
+  
+
+</body>
+
+<!--  Pie de pagina -->
+<div style="background-color: rgb(42, 43, 38);" class="card text-white">
+  <div class="container">   
+      <div class="card-body">
+        <div class="rounded float-right">
+          <p class="h5">
+            <i class="fab fa-playstation"></i>
+            <i class="fab fa-xbox"></i>
+            <i class="fas fa-gamepad"></i>
+          </p>
+        </div>
+        <blockquote class="blockquote mb-0">
+          <p><small>© 2020 BrokenControl.com - Todos los derechos reservados.</small></p> <i class="fab fa-facebook-square"></i> <i class="fab fa-twitter-square"></i> <i class="fab fa-instagram-square"></i>
+          <footer class="blockquote-footer">Hecho con mucho amor UwU</footer> 
+        </blockquote>
+      </div>
+  </div>
+</div>
+
+</html>
+
+
+
+<!--  rrr -->
